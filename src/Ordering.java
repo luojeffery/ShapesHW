@@ -110,18 +110,8 @@ public class Ordering {
             lst.add(new Circle(2, 3, 4));
             lst.add(new Triangle(p));
             lst.add(new Quadrilateral(p));
-            //TwoDShape least = printAllAndReturnLeast(lst, new Printer<>());
-            //System.out.println("least area: " + least);
-
-            //"Circle.setPosition does not throw IllegalArgumentException with ThreeDPoint in input list: -0.5"
-            List<ThreeDPoint> e = new ArrayList<>();
-            Circle circle = new Circle(2, 3, 4);
-            ThreeDPoint three = new ThreeDPoint(1,2,3);
-            e.add(three);
-            //circle.setPosition(e);
-
-            List<TwoDPoint> l = TwoDPoint.ofDoubles(new double[]{0, 0.5, 0.25});
-            System.out.println(l);
+            TwoDShape least = printAllAndReturnLeast(lst, new Printer<>());
+            System.out.println("least area: " + least);
         }
         catch(IllegalArgumentException e) {
             System.out.println(e.getMessage());
